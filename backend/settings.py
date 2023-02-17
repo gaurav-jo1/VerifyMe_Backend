@@ -66,6 +66,11 @@ REST_FRAMEWORK = {
     ]
 }
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend', 
+    'google.oauth2.backends.GoogleOAuth2',
+]
+
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=20),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=200),
@@ -165,7 +170,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Calcutta'
 
 USE_I18N = True
 
@@ -182,4 +187,6 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_ALL_ORIGINS= True
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+]
