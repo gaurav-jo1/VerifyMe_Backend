@@ -31,7 +31,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['verifyme-ts.netlify.app','localhost']
+ALLOWED_HOSTS = ['verifyme-ts.netlify.app','localhost','127.0.0.1']
 
 
 # Application definition
