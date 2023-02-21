@@ -6,9 +6,7 @@ from rest_framework import status
 from django.contrib.auth.models import User
 
 
-GOOGLE_CLIENT_ID = 'your_client_id'
-GOOGLE_CLIENT_SECRET = 'your_client_secret'
-REDIRECT_URI = 'http://localhost:8000/api/auth/google/callback/'
+
 
 # Create your models here.
 
