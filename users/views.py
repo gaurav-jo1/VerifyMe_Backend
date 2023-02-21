@@ -17,14 +17,6 @@ class getUser(APIView):
         serializer = UserSerializer(request.user)
         return Response(serializer.data)
 
-    def patch(self, request, format=None)
-
-
-
-
-
-
-
 class RegisterView(APIView):
     permission_classes = [permissions.AllowAny]
 
