@@ -6,8 +6,6 @@ from rest_framework import status
 from django.contrib.auth.models import User
 
 
-
-
 # Create your models here.
 
 class getUser(APIView):
@@ -16,6 +14,7 @@ class getUser(APIView):
     def get(self, request, format=None):
         serializer = UserSerializer(request.user)
         return Response(serializer.data)
+    
 
 class RegisterView(APIView):
     permission_classes = [permissions.AllowAny]
@@ -26,4 +25,3 @@ class RegisterView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
